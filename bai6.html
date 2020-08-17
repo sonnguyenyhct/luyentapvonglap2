@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+    <p id="heart"></p>
+    <script>
+        let num = 29;
+
+        let result = "";
+            for (row = 1; row <= num; row++){
+                if ((row > (num/2 - 2)) && (row < (num/2 + 2))){
+                    result += "&nbsp;\t";
+                }else if (row == 1 || row == 29 || row == 2 || row == 28){
+                    result += "&nbsp;\t";
+                }else {
+                    result += "*";
+                }
+            }
+            result += "<br>";
+            for (row = 1; row <= num; row++){
+                if (row == 1 || row == 29){
+                    result += "&nbsp;\t";
+                }else if ((row > (num/2 - 1)) && (row < (num/2 + 1))){
+                    result += "&nbsp;\t";
+                }else {
+                    result += "*";
+                }
+            }
+            result += "<br>";
+            for (row = 1; row <= num; row++){
+                result += "*";
+            }
+            result += "<br>";
+            for (col = num; col >= 1; col = col - 4){
+                for (space = (num - col)/2; space >= 1; space--){
+                    result += "&nbsp;\t";
+                }
+                for (row = 1; row <= col; row++){
+                    result += "*";
+                }
+                result += "<br>";
+            }
+        document.getElementById("heart").innerHTML = result;
+    </script>
+</body>
+</html>

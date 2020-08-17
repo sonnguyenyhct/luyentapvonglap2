@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<p id="result"></p>
+    <script>
+        let width = parseInt(prompt("Nhập vào chiều dài :"));
+        let height = parseInt(prompt("Nhập vào chiều rộng :"));
+        let result = "";
+        for (row = 0; row < width; row++){
+            result += "*"
+        }
+        for (col = 0; col < height; col++){
+            result += "<br>"
+            result += "*"
+            for (space = 0; space < width-2; space++){
+                result += "&ensp;";
+            }
+            result += "*"
+        }
+        result += "<br>"
+        for (row = 0; row < width; row++){
+            result += "*"
+        }
+        document.getElementById('result').innerHTML = result;
+    </script>
+</body>
+</html>

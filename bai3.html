@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <p id="display4"></p>
+    <script>
+        let num = 5;
+        let result = "";
+            for (col = 1; col <= num; col++){
+                result += "<br>";
+                for (row = 1; row <= col;row++){
+                    result += "*";
+                }
+            }
+        document.getElementById("display").innerHTML = result;
+
+        let num2 = 5;
+        let result2 = "";
+        for (col = num2; col >= 1; col--){
+            result2 += "<br>";
+            for (row = 1; row <= col;row++){
+                result2 += "*";
+            }
+        }
+        document.getElementById("display2").innerHTML = result2;
+
+        let num3 = 5;
+        let result3 = "";
+        for (col = 1; col <= num3; col++){
+            for (space = num3 - col; space>=1; space--){
+                result3 += "&ensp;";
+            }
+            for (row = 1; row <= col; row++){
+                result3 += "*";
+            }
+            result3 += "<br>";
+        }
+        document.getElementById("display3").innerHTML = result3;
+
+        let num4 = 5;
+        let result4 = "";
+        for (col = num4; col >= 1; col--){
+            for (space = (num4 - col); space >= 1; space--){
+                result4 += "&ensp;";
+            }
+            for (row = 1; row <= col; row++){
+                result4 += "*";
+            }
+            result4 += "<br>";
+        }
+
+        document.getElementById("display4").innerHTML = result4;
+
+    </script>
+</body>
+</html>
